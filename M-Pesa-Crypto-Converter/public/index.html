@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-Pesa ⇄ Crypto Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 M-Pesa ⇄ Crypto Dashboard</h1>
+      <p>Live prices, charts, trends & instant conversions</p>
+    </header>
+
+    <!-- Live Ticker -->
+    <div id="ticker" class="ticker-bar neon-glow">Loading live prices...</div>
+    <div id="last-updated" class="last-updated">Last updated: --</div>
+
+    <!-- Price Section -->
+    <section id="prices">
+      <h2>Current Prices (KES)</h2>
+      <div class="prices-container neon-box">
+        <span id="btc-price">BTC: Loading...</span>
+        <span id="eth-price">ETH: Loading...</span>
+        <span id="usdt-price">USDT: Loading...</span>
+      </div>
+    </section>
+
+    <!-- Converter Section -->
+    <section id="converter" class="neon-box">
+      <h2>Convert KES → Crypto</h2>
+      <input type="number" id="kes-amount" placeholder="Enter amount in KES">
+      <select id="crypto-select">
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="USDT">Tether (USDT)</option>
+      </select>
+      <h3>Converted Amount: <span id="converted-amount">0.00000000</span></h3>
+      <button id="copy-button">Copy</button>
+    </section>
+
+    <!-- Trending Coins Section -->
+    <section id="trending" class="neon-box">
+      <h2>🔥 Trending Coins</h2>
+      <div id="trend-list" class="trend-list"></div>
+    </section>
+
+    <!-- Charts Section -->
+    <section id="charts">
+      <h2>📈 Live Crypto Charts</h2>
+      <div class="charts-grid">
+        <div class="chart-widget neon-box">
+          <h3>BTC/USDT</h3>
+          <div id="btc-chart"></div>
+        </div>
+        <div class="chart-widget neon-box">
+          <h3>ETH/USDT</h3>
+          <div id="eth-chart"></div>
+        </div>
+        <div class="chart-widget neon-box">
+          <h3>USDT/USD</h3>
+          <div id="usdt-chart"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Crypto Dashboard | Powered by CoinGecko & TradingView</p>
+  </footer>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
